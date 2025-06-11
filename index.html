@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sd">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عيد الأضحى مبارڪ - سنڌي پروجيڪٽ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Nastaliq Urdu', serif;
+      background: linear-gradient(135deg, #fffde7, #e1f5fe);
+      color: #2e2e2e;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00695c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 5px solid #004d40;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h2 {
+      color: #00796b;
+    }
+
+    .card p {
+      font-size: 1.4em;
+      line-height: 1.8;
+    }
+
+    .btn {
+      background-color: #00796b;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1em;
+      border-top: 4px solid #00796b;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>عيد الأضحى مبارڪ!</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>عيد جي خوشيون</h2>
+      <p>عيد الأضحى قربانيءَ جي عظيم ڏينهن جي نمائندگي ڪري ٿو. اچو ته هن مبارڪ ڏينهن تي صبر، شڪر ۽ سخاوت کي فروغ ڏيون.</p>
+      <button class="btn" onclick="showGreeting()">عيد مبارڪ جو پيغام ڏسو</button>
+      <p id="greeting" style="margin-top: 20px;"></p>
+    </div>
+
+    <div class="card">
+      <h2>دعائون ۽ نيڪ تمنائون</h2>
+      <p>الله تعاليٰ اوهان جون قربانيون قبول فرمائي، ۽ اوهان جي زندگيءَ کي خوشين سان ڀري ڇڏي. آمين!</p>
+    </div>
+  </div>
+
+  <footer>
+راهب جلباڻي 
+  </footer>
+
+  <script>
+    function showGreeting() {
+      const greetings = [
+        "عيد مبارڪ! الله توھان جي قربانين کي قبول فرمائي!",
+        "عيد جي خوشين سان ڀريل ڏينهن مبارڪ!",
+        "دل سان عيد مبارڪ!",
+        "سڀني مسلمان ڀائرن ۽ ڀينرن کي عيد مبارڪ!"
+      ];
+      const greetingEl = document.getElementById("greeting");
+      const random = Math.floor(Math.random() * greetings.length);
+      greetingEl.textContent = greetings[random];
+    }
+  </script>
+</body>
+</html>
